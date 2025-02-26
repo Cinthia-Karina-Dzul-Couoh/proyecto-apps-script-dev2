@@ -16,6 +16,6 @@ function guardarUsuario(usuario){
     }
 }
 
-function listarUsuarios() {
+function listarUsuarios(){
     return obtenerDatos(env_().SH_REGISTRO_USUARIOS);
-}
+    }
