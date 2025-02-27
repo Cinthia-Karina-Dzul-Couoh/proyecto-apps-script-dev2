@@ -11,12 +11,12 @@ function FormularioRegistro() {
         
         const id= v4();
 
-        datosFormulario.id = id
+    datosFormulario.id = id
 
         google.script.run.withSuccessHandler(({titulo, descripcion}) => {
         notificacionTareaTerminada(titulo, descripcion);
             form.resetFields();
-        }).guardarUsuario(datosFormulario);
+        }).guardarUsuario(JSON.stringify({ datosFormulario}));
     }
 
     return (
